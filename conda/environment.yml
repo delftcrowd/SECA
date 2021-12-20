@@ -19,6 +19,9 @@ dependencies:
   - scikit-learn
   - scikit-image
   - scipy
+  - sphinx
+  - sphinxcontrib-htmlhelp >= 2.0.0
+  - sphinxcontrib-serializinghtml >= 1.1.5
   - tensorflow
   - tqdm
   - pip:
