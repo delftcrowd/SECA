@@ -16,7 +16,7 @@ setup(
     version=version["__version__"],
     description="",
     long_description=readme,
-    long_description_content_type='text/md',
+    long_description_content_type="text/md",
     url="https://github.com/delftcrowd/SECA",
     author="",
     author_email="",
@@ -25,13 +25,13 @@ setup(
     package_data={"seca": ["data/*.csv"]},
     key_words=["machine learning", "explainability",],
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 3 - Alpha",
         "Intended Audience :: Education",
         "Intended Audience :: Science/Research",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: Apache Software License",
         "Natural Language :: English",
-        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3",
     ],
     test_suite="tests",
     install_requires=[
@@ -45,12 +45,13 @@ setup(
         "scikit-learn",
         "scikit-image",
         "scipy",
-        "tensorflow"
+        "tensorflow",
         "saliency",
-        "symspellpy"
-  ],
+        "symspellpy",
+    ],
     extras_require={
         "dev": [
+            "black",
             "bump2version",
             "mock",
             "pytest",
@@ -60,7 +61,7 @@ setup(
             "sphinx-tabs",
             "sphinxext-rediraffe",
             "sphinx_inline_tabs",
-            "ghp-import"
+            "ghp-import",
         ]
     },
 )
