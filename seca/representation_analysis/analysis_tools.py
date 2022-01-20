@@ -192,11 +192,11 @@ def get_rules(semantic_feature_representation, min_support_score=0.6, min_lift_s
     return rules, frequent_itemsets
 
 
-if __name__ == "__main__":
-    print('-----All samples-----')
-    structured_representation_df = pd.read_csv('./semantic_feature_representation/elements.csv', delimiter=',')
+#if __name__ == "__main__":
+#    print('-----All samples-----')
+#    structured_representation_df = pd.read_csv('./semantic_feature_representation/elements.csv', delimiter=',')
     # print_features_counts_per_prediction(structured_representation_df, count_filter=2, bar_chart=False)
-    significant_features = compute_statistical_tests(structured_representation_df, print_test_values=True, representation_values='binary')
+#    significant_features = compute_statistical_tests(structured_representation_df, print_test_values=True, representation_values='binary')
     # fit_classifier(structured_representation_df, significant_semantic_features=significant_features, classifier='log-regression')
     # mined_rules = representation_rule_mining(structured_representation_df)
     # print(mined_rules.sort_values(by=['confidence'], ascending=False))
@@ -205,3 +205,7 @@ if __name__ == "__main__":
     # correctly_classified_df = structured_representation_df[structured_representation_df['classification_check'] == 'Correctly classified']
     # print('-----Misclassified samples-----')
     # misclassified_df = structured_representation_df[structured_representation_df['classification_check'] == 'Misclassified']
+
+print('-----All samples-----')
+structured_representation_df = pd.read_csv('../representation_extraction/representation.csv', delimiter=',')
+significant_features = compute_statistical_tests(structured_representation_df, print_test_values=True, representation_values='binary')

@@ -1,5 +1,5 @@
 import pandas as pd
-
+import json
 
 def get_vocabulary(annotations):
     """
@@ -64,3 +64,10 @@ def get_structured_representation(predictions, annotations, representation_value
 #         aggregated_annotations = json.load(json_file)
 #         structured_representation_df = get_structured_representation(image_labels_predictions, aggregated_annotations, 'numeric')
 #         structured_representation_df.to_csv("./semantic_feature_representation/representation.csv", index=False)
+
+with open("../semantic_feature_annotation/aggregated_annotation_pairs.json") as json_file:
+    labels_predictions = "./labels_predictions.csv"
+    image_labels_predictions = pd.read_csv(labels_predictions, delimiter=",")
+    aggregated_annotations = json.load(json_file)
+    structured_representation_df = get_structured_representation(image_labels_predictions, aggregated_annotations, 'numeric')
+    structured_representation_df.to_csv("./representation.csv", index=False)
