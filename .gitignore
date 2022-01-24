@@ -139,3 +139,4 @@ jupyter_book/_build/
 
 # IDE
 .vscode/
+output/

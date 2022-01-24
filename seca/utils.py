@@ -10,3 +10,4 @@ def load_image(image_path):
     """
     image = io.imread(image_path)
     return image
+
