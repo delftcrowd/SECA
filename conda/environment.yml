@@ -1,0 +1,29 @@
+name: seca
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bump2version
+  - graphviz
+  - jupyter-book
+  - keras
+  - matplotlib
+  - mlxtend
+  - notebook
+  - numpy
+  - pandas
+  - pip
+  - pytest
+  - python >=3.6,<=3.8
+  - scikit-learn
+  - scikit-image
+  - scipy
+  - sphinx
+  - sphinxcontrib-htmlhelp >= 2.0.0
+  - sphinxcontrib-serializinghtml >= 1.1.5
+  - tensorflow
+  - tqdm
+  - pip:
+      - saliency
+      - symspellpy

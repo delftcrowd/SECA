@@ -133,3 +133,9 @@ dmypy.json
 
 # Mac OS system file
 .DS_store
+
+# Jupyterbook build
+jupyter_book/_build/
+
+# IDE
+.vscode/
