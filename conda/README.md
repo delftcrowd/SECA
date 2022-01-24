@@ -7,5 +7,5 @@ git clone https://github.com/delftcrowd/SECA.git
 cd SECA
 conda env create --file conda/environment.yml
 conda activate seca
-pip install -e .
+pip install -e .[dev]
 ```
