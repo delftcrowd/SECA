@@ -218,19 +218,7 @@ def add_not_features(aggregated_annotations):
 #         file_name = 'aggregated_annotation_pairs.json'
 #     with open('./crowd_computing/' + file_name, 'w') as f:
 #         json.dump(aggregated_annotations, f)
-semantic_feature_combinations = True
-output_dir = '../../../example_data'
-output_csv = 'imagenet_fish_biased.csv'
-annotations_df = pd.read_csv(os.path.join(output_dir, output_csv), delimiter=',')
-with open('word_map.json', 'r') as f:
-    word_mapping = json.load(f)
-aggregated_annotations = get_aggregated_annotations(annotations_df, word_mapping, 'elements', 'binary')
-file_name = 'aggregated_annotations.json'
-if semantic_feature_combinations:
-    aggregated_annotations = compute_feature_pairs(aggregated_annotations)
-    file_name = 'aggregated_annotation_pairs.json'
-with open('./' + file_name, 'w') as f:
-    json.dump(aggregated_annotations, f)
+
 
 
 

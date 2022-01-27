@@ -206,6 +206,3 @@ def get_rules(semantic_feature_representation, min_support_score=0.6, min_lift_s
     # print('-----Misclassified samples-----')
     # misclassified_df = structured_representation_df[structured_representation_df['classification_check'] == 'Misclassified']
 
-print('-----All samples-----')
-structured_representation_df = pd.read_csv('../representation_extraction/representation.csv', delimiter=',')
-significant_features = compute_statistical_tests(structured_representation_df, print_test_values=True, representation_values='binary')
