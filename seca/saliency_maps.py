@@ -16,7 +16,7 @@ import tensorflow.compat.v1 as tf
 import tensorflow.python.keras.backend as K
 
 # Local imports
-from ..utils import load_image, save_image
+from .utils import load_image, save_image
 
 
 def saliency_map_extraction(
@@ -33,6 +33,11 @@ def saliency_map_extraction(
     num_of_images : int
         number of images to select from the dataset, defaults to None
     """
+
+    # Verify input parameters
+    assert os.path.exists(path_images), f"Cannot find directory with images: {path_images}"
+    assert os.path.exists(path_output), f"Cannot find directory for output: {path_output}"
+
     # Initialize session
     sess = K.get_session()
     graph = sess.graph
